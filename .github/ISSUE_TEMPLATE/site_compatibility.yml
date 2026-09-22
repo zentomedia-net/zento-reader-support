@@ -7,55 +7,36 @@ body:
     attributes:
       value: |
         Cảm ơn bạn đã đóng góp giúp Zento Reader ngày càng hoàn thiện!
-        *Nếu bạn là người dùng PRO, hãy chọn phân hạng PRO để được cam kết SLA hoàn thành trong vòng 7 ngày.*
-  - type: dropdown
-    id: user_tier
-    attributes:
-      label: Bạn đang sử dụng gói nào?
-      description: Người dùng Pro sẽ được xếp hàng ưu tiên xử lý trong vòng 7 ngày.
-      options:
-        - "👑 Zento Pro (Có License Key)"
-        - "🌱 Miễn phí (Community Free)"
-    validations:
-      required: true
-  - type: input
-    id: license_key
-    attributes:
-      label: License Key hoặc Email đăng ký Pro (Nếu có)
-      description: Ví dụ: ZEN-PRO-XXXX-XXXX hoặc dev@gmail.com. Chúng tôi dùng thông tin này để kích hoạt SLA 7 ngày.
-    validations:
-      required: false
+        *Nếu bạn là người dùng PRO, hãy nhập License Key hoặc Email để được ưu tiên xử lý trong vòng 7 ngày.*
+
   - type: input
     id: website_url
     attributes:
-      label: Đường dẫn trang web gặp sự cố (URL)
-      description: Dán đầy đủ đường link bạn đang đọc.
+      label: Đường dẫn trang web cần tối ưu (URL)
       placeholder: https://example.com/article/12345
     validations:
       required: true
-  - type: checkboxes
-    id: issue_type
+
+  - type: input
+    id: license_or_tier
     attributes:
-      label: Vấn đề bạn nhận thấy trên trang web này là gì?
-      options:
-        - label: "Chữ bị tối hoặc độ tương phản khó đọc trên nền Dark/Oled"
-        - label: "Hình ảnh minh họa hoặc banner bị che mờ/ám đen quá mức"
-        - label: "Khung video / Facebook Reels / YouTube bị đen màn hình"
-        - label: "Ảnh lazy-load không hiển thị khi cuộn nhanh"
-        - label: "Mục lục thông minh (Smart TOC) không bắt được tiêu đề bài viết"
-        - label: "Khác (vui lòng mô tả chi tiết bên dưới)"
-  - type: textarea
-    id: description
-    attributes:
-      label: Mô tả chi tiết vấn đề
-      description: Vui lòng mô tả chi tiết cách bạn tái hiện hoặc vị trí bị lỗi trên trang web.
-      placeholder: Khi mình mở bài viết trên và cuộn xuống mục 2 thì...
+      label: Gói tài khoản hoặc License Key
+      placeholder: "👑 Zento Pro (nhập mã ZEN-PRO-XXXX) hoặc 🌱 Miễn phí (Community Free)"
     validations:
       required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Chi tiết vấn đề hiển thị trên website này
+      placeholder: "Ví dụ: Khi bật chế độ Dark/Sepia, tiêu đề bài viết bị mờ, ảnh minh họa bị ám đen quá mức..."
+    validations:
+      required: true
+
   - type: textarea
     id: screenshots
     attributes:
-      label: Ảnh chụp màn hình (Khuyên dùng)
-      description: Kéo thả ảnh chụp màn hình trực tiếp vào đây để đội ngũ kỹ thuật đối soát nhanh nhất.
+      label: Ảnh chụp màn hình (Kéo thả ảnh trực tiếp vào đây)
+      placeholder: Kéo thả file ảnh chụp màn hình vào đây để kỹ thuật đối soát nhanh nhất.
     validations:
       required: false
