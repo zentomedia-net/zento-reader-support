@@ -1,31 +1,31 @@
-name: 🐛 Báo cáo lỗi Extension (Bug Report)
-description: Báo cáo lỗi kỹ thuật, phím tắt, giao diện popup, hoặc cài đặt options.
-title: "[Bug]: <Mô tả ngắn gọn lỗi>"
+name: 🐛 Bug Report | Báo cáo lỗi Extension
+description: Report software bugs, shortcuts failure, popup glitches, or settings persistence (Báo cáo lỗi kỹ thuật).
+title: "[Bug]: <Short description of the bug / Tóm tắt lỗi>"
 labels: ["bug", "needs-triage"]
 body:
   - type: input
     id: extension_version
     attributes:
-      label: Phiên bản Zento Reader bạn đang dùng
-      placeholder: e.g. 1.0.0 hoặc 1.1.0
+      label: Zento Reader Version (Phiên bản tiện ích)
+      placeholder: e.g. 1.1.0
     validations:
       required: true
 
   - type: input
     id: browser_env
     attributes:
-      label: Trình duyệt & Hệ điều hành
-      placeholder: Chrome 128 trên Windows 11 / Edge trên macOS Sonoma...
+      label: Browser & OS (Trình duyệt & Hệ điều hành)
+      placeholder: e.g. Chrome 128 on Windows 11 / Edge on macOS Sonoma
     validations:
       required: true
 
   - type: textarea
     id: bug_desc
     attributes:
-      label: Các bước tái hiện lỗi
+      label: Steps to Reproduce & Description (Các bước tái hiện & Mô tả lỗi)
       placeholder: |
-        1. Bấm mở Popup
-        2. Chọn theme Sepia
-        3. Phím tắt Alt + Shift + D không phản hồi...
+        1. Click extension icon to open popup
+        2. Switch to Sepia theme
+        3. Shortcut Alt + Shift + D does not respond...
     validations:
       required: true
