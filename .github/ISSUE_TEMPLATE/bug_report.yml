@@ -1,0 +1,31 @@
+name: 🐛 Báo cáo lỗi Extension (Bug Report)
+description: Báo cáo lỗi kỹ thuật, phím tắt, giao diện popup, hoặc cài đặt options.
+title: "[Bug]: <Mô tả ngắn gọn lỗi>"
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: extension_version
+    attributes:
+      label: Phiên bản Zento Reader bạn đang dùng
+      placeholder: e.g. 1.0.0 hoặc 1.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: browser_env
+    attributes:
+      label: Trình duyệt & Hệ điều hành
+      placeholder: Chrome 128 trên Windows 11 / Edge trên macOS Sonoma...
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug_desc
+    attributes:
+      label: Các bước tái hiện lỗi
+      placeholder: |
+        1. Bấm mở Popup
+        2. Chọn theme Sepia
+        3. Phím tắt Alt + Shift + D không phản hồi...
+    validations:
+      required: true
